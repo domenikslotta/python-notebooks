@@ -3,11 +3,7 @@ A collection of notebooks that I created as part of my work as SHK at the Univer
 
 ## How to use these notebooks
 
-1. Clone this repository with
-
-```
-$ git clone URL
-```
+1. Clone this repository.
 
 2. To install requirements using pip, run the following command-line:
 
