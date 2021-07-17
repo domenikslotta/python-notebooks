@@ -1,5 +1,6 @@
 # python-notebooks
 A collection of notebooks that I created as part of my work as SHK at the University of Paderborn.
+The code is commented in english while explanations in the markdowns are in German. Links to original (english) papers and other sources are also provided in the markdowns.
 
 ## How to use these notebooks
 
