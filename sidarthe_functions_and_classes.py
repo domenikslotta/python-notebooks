@@ -1,27 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# Dieses Notebook soll eine Sammlung von ständig benutzten Funktionen und Klassen sein, die ich im Laufe des Projekts erstellt habe.
-
-# In[ ]:
-
-
-# use this command in new command window to create .py file
-# jupyter nbconvert --to script collection.ipynb
-
-
-# In[1]:
-
-
 from typing import List
 from scipy import integrate
 import numpy as np
 import matplotlib.pyplot as plt
-
-import pysindy as ps
-
-
-# In[2]:
 
 
 class Parameters8:
@@ -75,10 +55,7 @@ class Parameters8:
         else:
             self.y0 = y0
 
-
-# In[3]:
-
-
+            
 def sidarthe_system8(parameters: Parameters8):
     """doc"""
     alpha = parameters.alpha
@@ -110,9 +87,6 @@ def sidarthe_system8(parameters: Parameters8):
     return dF
 
 
-# In[4]:
-
-
 def sidarthe_simulation8(parameters: Parameters8, t_0: int = 0, t_end: int = 730, steps_per_day: int = None):
     """doc"""
     dF = sidarthe_system8(parameters)
@@ -132,9 +106,6 @@ def sidarthe_simulation8(parameters: Parameters8, t_0: int = 0, t_end: int = 730
         if not r.successful():
             raise RuntimeError("Could not integrate")
     return t, y
-
-
-# In[6]:
 
 
 def plot_all_single_8(t, y) -> None:
@@ -184,10 +155,7 @@ def plot_all_single_8(t, y) -> None:
     plt.show()
 
 
-# In[7]:
-
-
-def plot_all_compare(t, y, y_sim):
+def plot_all_compare(t, y, y_sim, text="hier könnte etwas stehen"):
     """Used to plot given data points to learn the model and compare it with simulated model"""
     #plt.figure(figsize=(16, 9), dpi=160)
     plt.figure(figsize=(16, 9), dpi=100)
@@ -236,7 +204,7 @@ def plot_all_compare(t, y, y_sim):
     ax.axis("off")
     ax.text(0.5,
             0.45,
-            "hier könnte etwas stehen",
+            text,
             size=14,
             ha="center",
             bbox={
